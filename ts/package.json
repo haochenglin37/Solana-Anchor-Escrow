@@ -1,0 +1,19 @@
+{
+  "name": "escrow-market-ts",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "mocha -t 1000000 -r ts-node/register tests/**/*.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@solana/spl-token": "^0.4.0",
+    "@solana/web3.js": "^1.80.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.15.11",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

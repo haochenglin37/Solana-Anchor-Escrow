@@ -1,0 +1,32 @@
+{
+  "name": "escrow-market-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@solana/wallet-adapter-react": "^0.9.21",
+    "@solana/wallet-adapter-react-ui": "^0.9.21",
+    "@solana/wallet-adapter-wallets": "^0.19.16",
+    "@solana/web3.js": "^1.80.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.0"
+  }
+}

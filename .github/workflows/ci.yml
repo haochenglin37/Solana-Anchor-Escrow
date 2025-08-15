@@ -1,0 +1,29 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+      - name: Install Rust deps
+        run: cargo install cargo-deny
+      - name: Lint Rust
+        run: cargo clippy --manifest-path programs/escrow_market/Cargo.toml -- -D warnings
+      - name: Anchor test
+        run: anchor test
+      - name: Frontend lint
+        run: |
+          cd app
+          npm ci
+          npm run lint
+          npm run build

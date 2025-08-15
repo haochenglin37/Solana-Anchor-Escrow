@@ -1,0 +1,8 @@
+[programs.localnet]
+escrow_market = "Escrow1111111111111111111111111111111111111"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[scripts]
+test = "ts-mocha -p ./ts/tsconfig.json -t 1000000 ts/tests/**/*.ts"
